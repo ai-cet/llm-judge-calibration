@@ -1,6 +1,6 @@
 # Beyond Consensus: Mitigating the Agreeableness Bias in LLM Judge Evaluations
 
-his repository contains the artifacts for our paper on mitigating the positive bias of LLM-as-a-judge systems. While LLMs are good at identifying correct outputs (True Positives), they are poor at identifying incorrect ones (True Negatives). In addition to empirically quantifying the actual bias and showing that minority-veto ensemble outperforms majority consensus, we propose a novel regression-based framework that models this bias to provide more accurate and reliable evaluations, reducing evaluation error by 2x compared to state-of-the-art ensemble methods.
+This repository contains the artifacts for our paper on mitigating the positive bias of LLM-as-a-judge systems. While LLMs are good at identifying correct outputs (True Positives), they are poor at identifying incorrect ones (True Negatives). In addition to empirically quantifying the actual bias and showing that minority-veto ensemble outperforms majority consensus, we propose a novel regression-based framework that models this bias to provide more accurate and reliable evaluations, reducing evaluation error by 2x compared to state-of-the-art ensemble methods.
 
 ## Publication
 
