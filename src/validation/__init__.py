@@ -13,14 +13,6 @@ from .models import (
     GroundTruthFeedback
 )
 
-from .service import (
-    ValidationService,
-    ValidationRunner,
-    create_attempt_name,
-    calculate_precision_stats,
-    print_validation_stats
-)
-
 from .data import (
     DataProvider
 )
@@ -37,13 +29,6 @@ __all__ = [
     'ValidationBatch',
     'ValidatedFeedbackLine',
     'GroundTruthFeedback',
-
-    # Services
-    'ValidationService',
-    'ValidationRunner',
-    'create_attempt_name',
-    'calculate_precision_stats',
-    'print_validation_stats',
     
     # Data access
     'DataProvider',

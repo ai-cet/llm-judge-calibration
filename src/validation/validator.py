@@ -14,10 +14,7 @@ import pandas as pd
 sys.path.append("..")
 
 from src.config import NUM_SIDS, MODELS_GEN, MODELS_VAL, pathLogs, fpathLLMAsJudge, fpathValidatorSummary, pGa_CONST
-from src.validation.service import ValidationRunner, ValidationService
 from src.validation.data import DataProvider
-from src.validation.models import ValidationBatch, ValidationResult
-from src.utils import print_warning, print_error
 from src.validation.utils import merge_df_y_yhat, merge_df_merged_yhat, calculate_confusion_matrix_merge, tpr_tnr_list, pretty_print_into_file
 from src.validation.ensemble import ensemble_prediction, ensemble_writePg_hat_to_file
 from collections import defaultdict
@@ -26,11 +23,6 @@ from collections import defaultdict
 ####################
 # Config
 ####################
-
-### Missing annotations
-# CLAUDE_3_OPUS: 2 SIDs
-# GPT_4_TURBO: 17 SIDs
-# GPT_4O: 2 SIDs
 
 ####################
 # Setup

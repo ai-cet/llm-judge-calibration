@@ -165,7 +165,6 @@ def validate_model_name(model_name: str, valid_models: List[str]) -> bool:
     """
     return model_name in valid_models
 
-# TODO: This is quite approximative and should be improved
 def extract_error_type(error_message: str) -> str:
     """
     Extract error type from an error message.

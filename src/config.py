@@ -100,8 +100,6 @@ VALIDATION_OUTPUT_DIR = './validation_output'
 #   MODEL CONFIGURATION
 # =========================
 
-# TODO: Merge these with the model names in the Model enum
-
 # Model retry configuration
 MAX_RETRY_ATTEMPTS = 3
 RETRY_DELAY = 1.0  # seconds
