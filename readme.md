@@ -18,13 +18,58 @@ If you find our research or dataset useful, kindly consider citing it using the 
 }
 ```
 
+## Prerequisites
+
+This project needs Git and Docker as pre-requisites to run.
+
+### Install Docker [Ubuntu]
+
+```bash
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# Add your user to the docker group (optional, to run docker without sudo)
+sudo usermod -aG docker $USER
+
+# Restart your session or run:
+newgrp docker
+```
+
+### Install Git and Git LFS
+
+```bash
+# Install Git
+sudo apt update
+sudo apt install git
+
+# Install Git LFS
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt install git-lfs
+
+# Initialize Git LFS
+git lfs install
+```
+
 ## Setup Instructions
 
 1. **Clone the repository and download LFS files:**
 
     ```bash
-    git clone <repository-url>
-    cd llm-benchmarking
+    git clone https://github.com/ai-cet/llm-judge-calibration.git
+    cd llm-judge-calibration
     git lfs pull
     ```
 
